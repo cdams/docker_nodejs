@@ -1,17 +1,10 @@
-docker_nodejs
+Container Docker with nodeJS / yeoman
 =============
 
-Will become a heading
-==============
+ - Based on Centos7
+ - Exposed ports : 22 8080 9000 9001
 
-Will become a sub heading
+How to use it?
 --------------
 
-*This will be Italic*
-
-**This will be Bold**
-
-- This will be a list item
-- This will be a list item
-
-    Add a indent and this will end up as code
+docker run -d -p 3600:22 cdams/nodejs_yeoman
