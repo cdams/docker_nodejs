@@ -24,6 +24,14 @@ RUN npm install -g yo generator-angular generator-webapp
 
 # Create non-root user
 RUN /usr/sbin/useradd --create-home --password plop --shell /bin/bash user
-RUN passwd -f -u user && su - user
+RUN passwd -f -u user && chown -R user /usr && chmod -R 777 /usr/
+
+# Avoid the question at the yeoman first run
+RUN mkdir -p /.config/configstore
+RUN echo "clientId: 90670452932" > /.config/configstore/insight-yo.yml
+RUN echo "optOut: false" >> /.config/configstore/insight-yo.yml
+
+USER user
+WORKDIR /home/user
 
 #docker rm -f `docker ps --no-trunc -aq` && docker images | grep "<none>" | awk '{print $3}' | xargs docker rmi -f
