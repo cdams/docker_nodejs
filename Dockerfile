@@ -1,12 +1,12 @@
-FROM    centos:centos7
+FROM    centos:centos6
 MAINTAINER Damien <cdams@outlook.fr>
 
 ## RHEL/CentOS 7 64-Bit ##
-RUN     rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
-#yum groupinstall -y "Development tools"
+#RUN     rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
 
 ## RHEL/CentOS 6 ##
-#RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+#yum groupinstall -y "Development tools"
 
 # Default programs
 RUN     yum install -y openssh-server openssh-clients passwd git unzip bzip2 ruby-full rubygems tar
