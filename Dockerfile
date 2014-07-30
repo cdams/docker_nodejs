@@ -6,7 +6,7 @@ MAINTAINER Damien <cdams@outlook.fr>
 
 ## RHEL/CentOS 6 ##
 RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-#yum groupinstall -y "Development tools"
+yum groupinstall -y "Development tools"
 
 # Default programs
 RUN     yum install -y openssh-server openssh-clients passwd git unzip bzip2 ruby-full rubygems tar
