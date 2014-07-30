@@ -13,7 +13,9 @@ RUN     yum install -y openssh-server openssh-clients passwd git unzip bzip2 rub
 
 # SSH access
 RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
-RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config && echo 'root:admin' | chpasswd
+#RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+RUN sed -ri 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+RUN sed -ri 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config && echo 'root:admin' | chpasswd
 
 # Install sass/compass
 RUN gem install sass
@@ -31,7 +33,7 @@ ADD supervisord.conf /etc/
 # Create a user, because yeoman / bower get into troubles with root user
 RUN /usr/sbin/useradd --home-dir /usr/local --shell /bin/bash user
 RUN chown -R user /usr && chmod -R 777 /usr/
-RUN echo 'user:user' | chpasswd
+RUN echo 'user:user' | chpasswd && passwd -f -u user
 
 # Install Yo stack
 RUN npm install -g yo generator-angular generator-webapp

@@ -8,4 +8,4 @@ How to use it?
 --------------
 
 docker run -d -p 3600:22 cdams/nodejs_yeoman
-ssh user:user@locahost -p 3600
+ssh user@locahost -p 3600
