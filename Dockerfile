@@ -19,8 +19,7 @@ RUN gem install compass
 RUN 	yum install -y nodejs npm --enablerepo=epel
 
 # Create non-root user
-RUN /usr/sbin/useradd --create-home --password plop --shell /bin/bash user
-RUN passwd -f -u user #&& mkdir -p /.npm && chown -R user /.npm && chown -R user /usr/lib && chown -R user /lib
+RUN /usr/sbin/useradd --create-home --password plop --shell /bin/bash user && passwd -f -u user
 
 
 # Install Yo stack
@@ -31,7 +30,7 @@ RUN npm install -g yo generator-angular generator-webapp #--no-bin-links
 RUN mkdir -p /.config/configstore
 RUN echo "clientId: 90670452932" > /.config/configstore/insight-yo.yml
 RUN echo "optOut: false" >> /.config/configstore/insight-yo.yml
-RUN chown -R user /.config
+RUN chown -R user /.config && chown -R user /.npm && chown -R user /.local
 
 USER user
 WORKDIR /home/user
