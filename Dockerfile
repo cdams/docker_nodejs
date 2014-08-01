@@ -28,10 +28,10 @@ RUN npm install -g yo generator-angular generator-webapp #--no-bin-links
 
 
 # Avoid the question at the yeoman first run
-RUN mkdir -p /.config/configstore && chown -R user /.config
+RUN mkdir -p /.config/configstore
 RUN echo "clientId: 90670452932" > /.config/configstore/insight-yo.yml
 RUN echo "optOut: false" >> /.config/configstore/insight-yo.yml
-
+RUN chown -R user /.config
 
 USER user
 WORKDIR /home/user
