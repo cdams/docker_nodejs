@@ -25,12 +25,11 @@ RUN /usr/sbin/useradd --create-home --password plop --shell /bin/bash user && pa
 # Install Yo stack
 RUN npm install -g yo generator-angular generator-webapp #--no-bin-links
 
-
 # Avoid the question at the yeoman first run
-RUN mkdir -p /.config/configstore
+RUN mkdir -p /.config/configstore && mkdir /.local && mkdir /.cache
 RUN echo "clientId: 90670452932" > /.config/configstore/insight-yo.yml
 RUN echo "optOut: false" >> /.config/configstore/insight-yo.yml
-RUN chown -R user /.config && chown -R user /.npm && chown -R user /.local
+RUN chown -R user /.config && chown -R user /.npm && chown -R user /.local && chown -R user /.cache
 
 USER user
 WORKDIR /home/user
