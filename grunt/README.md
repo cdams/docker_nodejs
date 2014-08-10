@@ -1,26 +1,12 @@
-Container Docker with nodeJS / npm
+Container Docker with Grunt
 =============
 
  - Based on Centos7
+ - Parent image : cdams/nodejs
 
-Content
+How to use it?
 --------------
 
-* nodejs
-* npm
-* git
-* bzip2
-* rubygems
-* tar
+*** Running default :
+	docker run -d -v local/folder:/home/user cdams/nodejs_grunt
 
-* Sass
-* Compass
-
-* No-root user -> user
-
-Usage ?
----------------
-
-This is the base container for my other Node containers :
-- Yeoman
-- Grunt
