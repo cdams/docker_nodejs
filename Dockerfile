@@ -1,4 +1,4 @@
-FROM    centos:centos7
+FROM    centos:centos6
 MAINTAINER Damien <cdams@outlook.fr>
 
 ## RHEL/CentOS 6 ##
