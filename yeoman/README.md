@@ -1,17 +1,15 @@
 Container Docker with Yeoman
 =============
-
  - Based on Centos7
  - Parent image : cdams/nodejs
 
 How to use it?
 --------------
-
-*** Running default : webapp
+### Running default : webapp
 	docker run -it -v local/folder:/home/user cdams/nodejs_yeoman
 
-*** Running yo
+### Running yo
 	docker run -it -v local/folder:/home/user cdams/nodejs_yeoman --generators
 
-
-On Windows, errors could appear on npm install
+### Info for Windows Users
+If npm install is run on Windows, errors could appear. Don't worry about
