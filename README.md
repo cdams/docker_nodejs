@@ -1,9 +1,26 @@
-Container Docker with nodeJS / yeoman
+Container Docker with nodeJS / npm
 =============
 
  - Based on Centos6
 
-How to use it?
+Content
 --------------
 
-docker run -i cdams/nodejs_yeoman yo
+* nodejs
+* npm
+* git
+* bzip2
+* rubygems
+* tar
+
+* Sass
+* Compass
+
+* No-root user -> user
+
+Usage ?
+---------------
+
+This is the base container for my other Node containers :
+- Yeoman
+- Grunt
