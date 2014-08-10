@@ -1,4 +1,4 @@
-Container Docker with Yeoman git
+Container Docker with Yeoman
 =============
  - Based on Centos7
  - Parent image : cdams/nodejs
