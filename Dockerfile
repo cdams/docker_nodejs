@@ -1,13 +1,8 @@
 FROM    centos:centos7
 MAINTAINER Damien <cdams@outlook.fr>
 
-<<<<<<< HEAD
 ## RHEL/CentOS 6 ##
 RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-=======
-## RHEL/CentOS 7 64-Bit ##
-RUN     rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
->>>>>>> master
 
 # Default programs + Install Node.js and npm
 RUN     yum install -y git bzip2 rubygems tar nodejs npm --enablerepo=epel
