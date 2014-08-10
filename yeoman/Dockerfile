@@ -11,5 +11,5 @@ RUN chown -R user /.npm /usr/lib /.config /.local /.cache
 USER user
 WORKDIR /home/user
 
-CMD ["webapp", "--skip-install"]
+CMD ["--skip-install"]
 ENTRYPOINT ["yo"]
