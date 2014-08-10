@@ -6,17 +6,14 @@ Container Docker with nodeJS / npm
 Content
 --------------
 
-* nodejs
-* npm
-* git
-* bzip2
-* rubygems
-* tar
+- nodejs / npm
+- git
+- bzip2 / tar
+- rubygems
 
-* Sass
-* Compass
+- Sass / Compass
 
-* No-root user -> user
+A No-root user -> user
 
 Usage ?
 ---------------
