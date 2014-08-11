@@ -13,5 +13,12 @@ RUN gem install sass && gem install compass
 # Create non-root user
 RUN /usr/sbin/useradd --create-home --shell /bin/bash user && echo 'root:admin' | chpasswd
 
+# Install Yo stack
+RUN npm install -g yo
+
+# User permissions
+RUN mkdir -p /.config/configstore /.local /.cache
+RUN chown -R user /.npm /usr/lib /.config /.local /.cache
+
 # Useful command to clean docker images / containers
 #docker rm -f `docker ps --no-trunc -aq` && docker images | grep "<none>" | awk '{print $3}' | xargs docker rmi -f

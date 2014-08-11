@@ -1,8 +1,8 @@
 FROM    cdams/nodejs:centos6
 MAINTAINER Damien <cdams@outlook.fr>
 
-# Install Yo stack
-RUN npm install -g yo generator-angular generator-webapp generator-symfony #--no-bin-links
+# Install Yo generator
+RUN npm install -g generator-angular generator-webapp generator-symfony #--no-bin-links
 
 # Avoid the question at the yeoman first run
 RUN mkdir -p /.config/configstore /.local /.cache

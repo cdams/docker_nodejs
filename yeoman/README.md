@@ -1,6 +1,6 @@
 Container Docker with Yeoman
 =============
- - Based on Centos7
+ - Based on Centos6
  - Parent image : cdams/nodejs
 
 How to use it?
