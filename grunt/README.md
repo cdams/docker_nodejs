@@ -9,4 +9,3 @@ How to use it?
 
 *** Running default :
 	docker run -d -v local/folder:/home/user cdams/nodejs_grunt
-

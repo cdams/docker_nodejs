@@ -1,7 +1,7 @@
 Container Docker with nodeJS / npm
 =============
 
- - Based on Centos7
+ - Based on Centos6
 
 Content
 --------------
@@ -18,5 +18,6 @@ Usage ?
 ---------------
 
 This is the base container for my other Node containers :
+
 - Yeoman
 - Grunt

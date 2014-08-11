@@ -1,4 +1,4 @@
-FROM    cdams/nodejs:centos7
+FROM    cdams/nodejs
 MAINTAINER Damien <cdams@outlook.fr>
 
 USER user
