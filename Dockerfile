@@ -5,7 +5,7 @@ MAINTAINER Damien <cdams@outlook.fr>
 RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
 
 # Default programs + Install Node.js and npm
-RUN     yum install -y git bzip2 rubygems tar nodejs npm --enablerepo=epel
+RUN     yum install -y git bzip2 rubygems ruby-devel tar nodejs npm --enablerepo=epel
 
 # Install sass/compass
 RUN gem install sass && gem install compass
