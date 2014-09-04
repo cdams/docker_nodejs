@@ -2,7 +2,7 @@ FROM    centos:centos7
 MAINTAINER Damien <cdams@outlook.fr>
 
 ## RHEL/CentOS 7 64-Bit ##
-RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-1.noarch.rpm
 
 # Default programs + Install Node.js and npm
 RUN     yum install -y git bzip2 rubygems ruby-devel make tar nodejs npm --enablerepo=epel
